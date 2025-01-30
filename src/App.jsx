@@ -13,10 +13,10 @@ import Headlines from "./layouts/defheadlines";
 function App(){
     const Routs = createBrowserRouter([
         {path: '/', element: <><NEWS/></>},
-        {path: '/headlines', element: <><Headlines/></>},
+        {path: '/bbc-headlines', element: <><Headlines/></>},
         {path: '/industrial-news',element: <><Industry/></>},
         {path: '/tech-news',element: <><Tech/></>},
-        {path: '/bbc-headlines',element: <><TopHeadlines/></>},
+        {path: '/headlines',element: <><TopHeadlines/></>},
         {path: '/bbc', element: <><BBC/></>},
 
     ]);

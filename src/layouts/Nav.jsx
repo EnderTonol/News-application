@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import { Link,Button,Divider } from '@heroui/react';
+import Developer from './Developer'
 import {
   Drawer,
   DrawerContent,
@@ -45,7 +46,8 @@ const Nav = () => {
               <Link href="/bbc" className='font-sans text-lg '>BBC News</Link>
               </DrawerBody>
               <Divider/>
-              <DrawerFooter>
+              <DrawerFooter className='flex flex-col gap-2'>
+                <Developer/>
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>

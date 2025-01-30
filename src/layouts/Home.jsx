@@ -3,6 +3,7 @@ import { Link,Code } from '@heroui/react';
 import Marquee from "react-fast-marquee";
 import { useState,useEffect } from 'react';
 import '../App.css';
+import Developer from './Developer';
 
 const Home = () => {
   
@@ -31,15 +32,14 @@ const Home = () => {
   return (
     <>
     <motion.div>
-        <motion.div>
         <motion.div initial={{opacity: 0}} whileInView={{ opacity: 1}} viewport={{ once: true }} className='flex flex-col items-center justify-center h-[600px] bg-slate-950'>
            <motion.p className='my-2 font-mono text-4xl font-bold text-white md:text-9xl'><span className='text-red-500'>WORLD</span>NEWS</motion.p>
            <Marquee direction='right' speed={40} pauseOnHover><div className='flex flex-row gap-2 overflow-hidden'>{articles.map((itm)=> (<><p className='text-2xl tracking-wider text-white md:text-4xl font-Akira' >{itm.title+ ', '}</p></>))}</div></Marquee>
            <Marquee direction='right' pauseOnHover><div className='flex flex-row gap-2 overflow-hidden'>{articles.map((itm)=> (<><p className='text-xl tracking-wider text-white md:text-2xl font-Akira' >{itm.description + ', '}</p></>))}</div></Marquee>
-           <Code color='danger'>This Site is fully Open-Source</Code>
-           <Link href='https://github.com/EnderTonol' color='warning' className='pt-2' isExternal showAnchorIcon >GitHub</Link>
-           
-        </motion.div>
+           <div className='flex items-center flex-col mt-8'>
+           <Developer/>
+           <Link href='https://github.com/EnderTonol' color='warning' isExternal showAnchorIcon >GitHub</Link>
+           </div>
         </motion.div>
     </motion.div>
     </>
