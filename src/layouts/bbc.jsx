@@ -1,9 +1,9 @@
 import { useState,useEffect } from "react";
 import { motion } from 'framer-motion';
 import { Spinner,Card,CardHeader,CardBody,CardFooter,Divider,Tooltip,Link,Image } from "@heroui/react";
-function TopHeadlines(){
+function BBC(){
        const [articles, setArticles] = useState([]);
-       var URL = 'https://newsapi.org/v2/top-headlines?' +
+       var URL = 'https://newsapi.org/v2/everything?' +
        'sources=bbc-news&' +
        'apiKey=fad69300e628408b848d23759c9d1440';
          var REQ = new Request(URL);
@@ -26,7 +26,7 @@ function TopHeadlines(){
     return (
         <>
         <motion.div className="flex flex-row gap-1 w-full h-16 bg-gray-950 items-center justify-center text-lg md:text-2xl">
-            <p className="font-Akira tracking-widest text-white"><span className="text-red-500">TOP</span> HEADLINES</p>
+            <p className="font-Akira tracking-widest text-white"><span className="text-red-500">BBC</span> HEADLINES</p>
         </motion.div>
         <motion.div className="flex flex-col gap-2 p-2 rounded-l-lg rounded-r-lg">
             {
@@ -68,4 +68,4 @@ function TopHeadlines(){
         </>
     )
 }
-export default TopHeadlines;
+export default BBC;

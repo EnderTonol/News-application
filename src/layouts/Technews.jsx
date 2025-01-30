@@ -1,32 +1,31 @@
-import { useState,useEffect } from "react";
-import { motion } from 'framer-motion';
-import { Spinner,Card,CardHeader,CardBody,CardFooter,Divider,Tooltip,Link,Image } from "@heroui/react";
-function TopHeadlines(){
-       const [articles, setArticles] = useState([]);
-       var URL = 'https://newsapi.org/v2/top-headlines?' +
-       'sources=bbc-news&' +
-       'apiKey=fad69300e628408b848d23759c9d1440';
-         var REQ = new Request(URL);
-         useEffect(() => {
-           const fetchData = async () => {
-             try {
-               const response = await fetch(REQ);
-               if (!response.ok) {
-                 throw new Error(`HTTP error! status: ${response.status}`);
-               }
-               const data = await response.json();
-               setArticles(data.articles);
-             } catch (error) {
-               console.error("Error fetching data:", error);
-             }
-           };
-           fetchData();
-         }, []);
+import { Card,Image,Tooltip,CardHeader,CardBody,CardFooter,Divider,Link,Spinner } from "@heroui/react";
+import { useEffect,useState } from "react"; 
+import { motion } from "framer-motion";
+function Tech(){
 
-    return (
+    const [articles, setArticles] = useState([]);
+      var URL = 'https://newsapi.org/v2/everything?sources=techcrunch&apiKey=fad69300e628408b848d23759c9d1440';
+      var REQ = new Request(URL);
+      useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch(REQ);
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            setArticles(data.articles);
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
+        };
+        fetchData();
+      }, []);
+
+    return(
         <>
         <motion.div className="flex flex-row gap-1 w-full h-16 bg-gray-950 items-center justify-center text-lg md:text-2xl">
-            <p className="font-Akira tracking-widest text-white"><span className="text-red-500">TOP</span> HEADLINES</p>
+            <p className="font-Akira tracking-widest text-white"><span className="text-red-500">TECH</span> NEWS</p>
         </motion.div>
         <motion.div className="flex flex-col gap-2 p-2 rounded-l-lg rounded-r-lg">
             {
@@ -58,6 +57,8 @@ function TopHeadlines(){
                     </CardBody>
                     <Divider/>
                     <CardFooter className="flex flex-col items-start font-sans">
+                    <p><strong>Source:</strong> {article.source.name || "Unknown"}</p>
+                    <p><strong>Author:</strong><span className="italic">  --{article.author || "Unknown"}</span></p>
                     <p><strong>Published At:</strong> {new Date(article.publishedAt).toLocaleString()}</p>
                     </CardFooter>
                   </Card>
@@ -67,5 +68,6 @@ function TopHeadlines(){
         </motion.div>
         </>
     )
+
 }
-export default TopHeadlines;
+export default Tech;

@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
-import { Card,CardHeader,CardFooter,CardBody,Divider,Button,ButtonGroup,Image,Link,Tooltip,Spinner } from '@heroui/react';
+import { Card,CardHeader,CardFooter,CardBody,Divider,Image,Link,Tooltip,Spinner } from '@heroui/react';
+import { motion } from "framer-motion";
 function NEWS() {
   const [articles, setArticles] = useState([]);
-  var URL = 'https://newsapi.org/v2/everything?' +
-  'country=us'
-  'apiKey=fad69300e628408b848d23759c9d1440';
-  // 'https://newsapi.org/v2/top-headlines?q=bitcoin&apiKey=fad69300e628408b848d23759c9d1440'
-  // 'country=us&' +
+  var URL = 'https://newsapi.org/v2/everything?q=tesla&from=2024-12-30&sortBy=publishedAt&apiKey=fad69300e628408b848d23759c9d1440';
   var REQ = new Request(URL)
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +24,10 @@ function NEWS() {
 
   return (
     <>
-      <div className="flex flex-col gap-2 p-2">
+      <motion.div className="flex flex-row gap-1 w-full h-16 bg-gray-950 items-center justify-centertext-lg md:text-2xl">
+            <p className="font-Akira tracking-widest text-white"><span className="text-red-500">BREAKING</span> NEWS</p>
+      </motion.div>
+      <div className="flex flex-col gap-2 p-2 rounded-l-lg rounded-r-lg">
         {articles.length > 0 ? (
           articles.map((article, idx) => (
             <Card key={idx} className="z-0">
