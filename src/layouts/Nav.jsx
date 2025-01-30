@@ -17,7 +17,7 @@ const Nav = () => {
   return (
     <>
     <div className='flex flex-col gap-2'>
-    <motion.nav initial={{y: -100, opacity: 0}} animate={{y: 0, opacity: 1}} className='fixed z-10 flex flex-row items-center w-full h-14  gap-4 p-4 text-white bg-slate-900'>
+    <motion.nav initial={{y: -100, opacity: 0}} animate={{y: 0, opacity: 1}} className='fixed z-10 flex flex-row items-center w-full h-14  gap-6 p-4 text-white bg-slate-900'>
             <Link href='/' className='font-bold tracking-wider font-Akira text-medium md:text-lg text-white'>Qvis News</Link>
             <div className='grow'></div>
             <div className='hidden md:flex gap-2'>
