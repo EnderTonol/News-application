@@ -47,3 +47,14 @@ npm start
 2. Navigation required redirects Netlify
 3. speed optimization
 ##### If someone able to solve these issuse then fork site or add repo fixes !
+
+## Desktop View
+  <img src="src/assets/demos/desk1.png" alt="News Preview" width="500">
+  <img src="src/assets/demos/desk2.png" alt="News Preview" width="500">
+  <img src="src/assets/demos/desk3.png" alt="News Preview" width="500">
+  
+## Mobile View
+  <img src="src/assets/demos/mob1.png" alt="News Preview" width="500">
+  <img src="src/assets/demos/mob2.png" alt="News Preview" width="500">
+  <img src="src/assets/demos/mob3.png" alt="News Preview" width="500">
+
