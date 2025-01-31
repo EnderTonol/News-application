@@ -19,12 +19,11 @@ A modern **React.js** news application that fetches the latest articles using th
 
 | Technology      | Purpose |
 |----------------|---------|
-| **React.js**   | Frontend framework |
+| **React.js**   | Frontend framework (Vite integreated + eslint) |
 | **React Router** | Navigation & routing |
 | **NewsAPI**    | Fetching latest news |
 | **Framer Motion** | Smooth animations |
 | **HeroUI** | Beautiful UI components |
-| **Netlify Functions / Express.js** | Server-side proxy to fetch API data |
 
 ---
 
@@ -33,4 +32,18 @@ A modern **React.js** news application that fetches the latest articles using th
 ### 1️⃣ Clone the Repository
 ```sh
 git clone https://github.com/your-username/news-app.git
+```
+Enter Site Root
+```sh
 cd news-app
+```
+Run Project
+```sh
+npm start
+```
+
+#### Issues
+1. Netlify Occurs error in Calling API So, Not live Avaliability
+2. Navigation required redirects Netlify
+3. speed optimization
+##### If someone able to solve these issuse then fork site or add repo fixes !
