@@ -4,7 +4,7 @@ import { Spinner,Card,CardHeader,CardBody,CardFooter,Divider,Tooltip,Link,Image 
 function Headlines(){
        const [articles, setArticles] = useState([]);
        var URL = 'https://newsapi.org/v2/top-headlines?' +
-       'country=us' +
+       'country=us&' +
        'apiKey=fad69300e628408b848d23759c9d1440';
          var REQ = new Request(URL);
          useEffect(() => {

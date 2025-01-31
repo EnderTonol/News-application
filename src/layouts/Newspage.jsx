@@ -3,7 +3,7 @@ import { Card,CardHeader,CardFooter,CardBody,Divider,Image,Link,Tooltip,Spinner 
 import { motion } from "framer-motion";
 function NEWS() {
   const [articles, setArticles] = useState([]);
-  var URL = 'https://newsapi.org/v2/everything?q=tesla&from=2024-12-30&sortBy=publishedAt&apiKey=fad69300e628408b848d23759c9d1440';
+  var URL = 'https://newsapi.org/v2/everything?q=tesla&from=2024-12-31&sortBy=publishedAt&apiKey=fad69300e628408b848d23759c9d1440';
   var REQ = new Request(URL)
   useEffect(() => {
     const fetchData = async () => {
