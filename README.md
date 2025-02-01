@@ -31,11 +31,11 @@ A modern **React.js** news application that fetches the latest articles using th
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/your-username/news-app.git
+git clone https://github.com/EnderTonol/News-application.git
 ```
 Enter Site Root
 ```sh
-cd news-app
+cd News-application
 ```
 Run Project
 ```sh
@@ -49,12 +49,12 @@ npm start
 ##### If someone able to solve these issuse then fork site or add repo fixes !
 
 ## Desktop View
-  <img src="src/assets/demos/desk1.png" alt="News Preview" width="500">
-  <img src="src/assets/demos/desk2.png" alt="News Preview" width="500">
-  <img src="src/assets/demos/desk3.png" alt="News Preview" width="500">
+  <img src="src/assets/demos/desk1.png" alt="News Preview" >
+  <img src="src/assets/demos/desk2.png" alt="News Preview" >
+  <img src="src/assets/demos/desk3.png" alt="News Preview" >
   
 ## Mobile View
-  <img src="src/assets/demos/mob1.png" alt="News Preview" width="500">
-  <img src="src/assets/demos/mob2.png" alt="News Preview" width="500">
-  <img src="src/assets/demos/mob3.png" alt="News Preview" width="500">
+  <img src="src/assets/demos/mob1.png" alt="News Preview" >
+  <img src="src/assets/demos/mob2.png" alt="News Preview" >
+  <img src="src/assets/demos/mob3.png" alt="News Preview" >
 
